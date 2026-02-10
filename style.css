@@ -24,6 +24,7 @@ body {
 .btn-row {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .btn {
@@ -42,7 +43,7 @@ body {
 .no {
   background: #ccc;
   color: black;
-  position: relative;
+  position: absolute;
   transition: 0.2s;
 }
 
