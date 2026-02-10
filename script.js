@@ -12,7 +12,7 @@ yesBtn.addEventListener("click", () => {
     heartLoader.classList.add("hidden");
     resultContainer.classList.remove("hidden");
 
-    loveMessage.textContent = "Aww, she loves you too! ❤️";
+    loveMessage.textContent = "Eks baie lief vir jou my Dezi van jou Baas Wessie 💘";
 
     confetti({
       particleCount: 200,
@@ -24,10 +24,9 @@ yesBtn.addEventListener("click", () => {
 
 // NO BUTTON RUNS AWAY
 noBtn.addEventListener("mouseover", () => {
-  const x = Math.random() * (window.innerWidth - 100);
-  const y = Math.random() * (window.innerHeight - 100);
+  const x = Math.random() * (window.innerWidth - 150);
+  const y = Math.random() * (window.innerHeight - 150);
 
-  noBtn.style.position = "absolute";
   noBtn.style.left = `${x}px`;
   noBtn.style.top = `${y}px`;
 });
