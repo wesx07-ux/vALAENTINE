@@ -12,7 +12,7 @@ yesBtn.addEventListener("click", () => {
     heartLoader.classList.add("hidden");
     resultContainer.classList.remove("hidden");
 
-    loveMessage.textContent = "Eks baie lief vir jou my Dezi van jou Baas Wessie 💘";
+    loveMessage.textContent = "Eks baie lief vir jou my Dezi van jou Baas Wessie en sal jy asb my valentine wees 💘";
 
     confetti({
       particleCount: 200,
