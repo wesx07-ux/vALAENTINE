@@ -1,22 +1,10 @@
-const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
-const questionContainer = document.getElementById("questionContainer");
+const noBtn = document.getElementById("noBtn");
 const heartLoader = document.getElementById("heartLoader");
 const resultContainer = document.getElementById("resultContainer");
-const gifResult = document.getElementById("gifResult");
 const loveMessage = document.getElementById("loveMessage");
 
-// Set your partner's name here
-const partnerName = "My Pookie woookie snookie bear";
-
-noBtn.addEventListener("mouseover", () => {
-  const newX = Math.floor(Math.random() * (questionContainer.offsetWidth - noBtn.offsetWidth));
-  const newY = Math.floor(Math.random() * (questionContainer.offsetHeight - noBtn.offsetHeight));
-
-  noBtn.style.left = `${newX}px`;
-  noBtn.style.top = `${newY}px`;
-});
-
+// YES BUTTON LOGIC
 yesBtn.addEventListener("click", () => {
   heartLoader.classList.remove("hidden");
 
@@ -24,17 +12,22 @@ yesBtn.addEventListener("click", () => {
     heartLoader.classList.add("hidden");
     resultContainer.classList.remove("hidden");
 
-    // Custom message
-    loveMessage.textContent = `Eks baie lief vir jou my Dezi van jou Baas Wessie ❤️`;
+    loveMessage.textContent = "Aww, she loves you too! ❤️";
 
-
-    // Confetti explosion
     confetti({
       particleCount: 200,
       spread: 80,
       origin: { y: 0.6 }
     });
-
-  }, 3000);
+  }, 2000);
 });
 
+// NO BUTTON RUNS AWAY
+noBtn.addEventListener("mouseover", () => {
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 100);
+
+  noBtn.style.position = "absolute";
+  noBtn.style.left = `${x}px`;
+  noBtn.style.top = `${y}px`;
+});
