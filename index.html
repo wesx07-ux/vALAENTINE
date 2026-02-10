@@ -1,22 +1,33 @@
-<link rel="stylesheet" href="styles.css" />
-<div class="background-hearts"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Do You Love Me?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-<div id="questionContainer" class="card">
-  <h2 class="title">Do you love me?</h2>
+<body>
+  <div class="background-hearts"></div>
 
-  <div class="btn-row">
-    <button id="yesBtn" class="btn yes">Yes 💖</button>
-    <button id="noBtn" class="btn no">No 😳</button>
+  <div id="questionContainer" class="card">
+    <h2 class="title">Do you love me?</h2>
+
+    <div class="btn-row">
+      <button id="yesBtn" class="btn yes">Yes 💖</button>
+      <button id="noBtn" class="btn no">No 😳</button>
+    </div>
+
+    <div id="heartLoader" class="loader hidden"></div>
+
+    <div id="resultContainer" class="result hidden">
+      <h3 id="loveMessage"></h3>
+    </div>
   </div>
 
-  <div id="heartLoader" class="loader hidden"></div>
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
-  <div id="resultContainer" class="result hidden">
-    <h3 id="loveMessage"></h3>
-  </div>
-</div>
-
-<!-- Confetti library -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
