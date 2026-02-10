@@ -25,10 +25,8 @@ yesBtn.addEventListener("click", () => {
     resultContainer.classList.remove("hidden");
 
     // Custom message
-    loveMessage.textContent = `Aww, ${partnerName} loves you too! ❤️`;
+    loveMessage.textContent = `Eks baie lief vir jou my Dezi van jou Baas Wessie ❤️`;
 
-    // Play GIF
-    gifResult.play();
 
     // Confetti explosion
     confetti({
@@ -39,3 +37,4 @@ yesBtn.addEventListener("click", () => {
 
   }, 3000);
 });
+
