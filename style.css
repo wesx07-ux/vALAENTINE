@@ -1,104 +1,71 @@
 body {
   margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #ffe6f2;
-  font-family: "Poppins", sans-serif;
+  padding: 0;
+  background: #ffdde1;
+  font-family: Arial, sans-serif;
   overflow: hidden;
 }
 
-/* Floating hearts background */
-.background-hearts::before,
-.background-hearts::after {
-  content: "❤️";
-  position: absolute;
-  font-size: 40px;
-  animation: float 6s infinite ease-in-out;
-  opacity: 0.4;
-}
-
-.background-hearts::after {
-  left: 70%;
-  animation-duration: 8s;
-}
-
-@keyframes float {
-  0% { transform: translateY(100vh) rotate(0deg); }
-  100% { transform: translateY(-20vh) rotate(360deg); }
-}
-
-/* Card */
 .card {
   background: white;
-  padding: 30px;
-  border-radius: 20px;
+  padding: 25px;
+  width: 300px;
+  margin: 120px auto;
   text-align: center;
-  width: 350px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .title {
-  margin-bottom: 20px;
   font-size: 24px;
+  margin-bottom: 20px;
 }
 
-/* Buttons */
 .btn-row {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
 }
 
 .btn {
-  padding: 12px 25px;
+  padding: 12px 20px;
   border: none;
-  border-radius: 12px;
+  border-radius: 8px;
   font-size: 18px;
   cursor: pointer;
-  transition: 0.2s;
 }
 
 .yes {
-  background: #ff4da6;
+  background: #ff4d79;
   color: white;
 }
 
 .no {
-  background: #ddd;
-  position: absolute;
-  right: 40px;
-  bottom: 40px;
-}
-
-/* Loader */
-.loader {
-  margin: 20px auto;
-  width: 40px;
-  height: 40px;
-  border: 5px solid #ff99cc;
-  border-top-color: transparent;
-  border-radius: 50%;
-  animation: spin 1s infinite linear;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-/* Result */
-.result {
-  margin-top: 20px;
-  animation: fadeIn 1s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+  background: #ccc;
+  color: black;
+  position: relative;
+  transition: 0.2s;
 }
 
 .hidden {
   display: none;
+}
+
+.loader {
+  margin: 20px auto;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff4d79;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #ff4d79;
 }
