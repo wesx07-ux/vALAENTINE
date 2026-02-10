@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="styles.css" />
+<div class="background-hearts"></div>
+
+<div id="questionContainer" class="card">
+  <h2 class="title">Do you love me?</h2>
+
+  <div class="btn-row">
+    <button id="yesBtn" class="btn yes">Yes 💖</button>
+    <button id="noBtn" class="btn no">No 😳</button>
+  </div>
+
+  <div id="heartLoader" class="loader hidden"></div>
+
+  <div id="resultContainer" class="result hidden">
+    <video id="gifResult" src="your-video.mp4" autoplay loop></video>
+    <h3 id="loveMessage"></h3>
+  </div>
+</div>
+
+<!-- Confetti library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script src="script.js"></script>
